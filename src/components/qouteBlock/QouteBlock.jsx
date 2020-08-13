@@ -96,7 +96,7 @@ const QouteBlock = ({ getQoute, qouteRes, bgColor }) => {
     getQoute();
   };
 
-  const { author, quote } = qouteRes;
+  const { content, author } = qouteRes;
 
   if (qouteRes.length === 0) {
     return <Spinner />;
@@ -106,7 +106,7 @@ const QouteBlock = ({ getQoute, qouteRes, bgColor }) => {
     <Qoute style={{ background: `${bgColor}`, color: `${bgColor}` }}>
       <figure id='quote-box'>
         <blockquote cite='' id='text'>
-          {quote}
+          {content}
         </blockquote>
         <figcaption id='author'> &mdash; {author}</figcaption>
         <div className='social'>

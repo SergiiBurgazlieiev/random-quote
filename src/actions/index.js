@@ -7,7 +7,7 @@ import axios from 'axios';
 export const getQoute = () => async dispatch => {
   try {
     const response = await axios.get(
-      'http://quotes.stormconsultancy.co.uk/random.json'
+      'https://api.quotable.io/random'
     );
     batch(() => {
       dispatch({ type: GET_QUOTES, payload: response.data });
